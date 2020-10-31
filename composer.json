@@ -1,0 +1,21 @@
+{
+	"name": "znbundle/log",
+	"type": "extension",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Yamshikov Vitaliy",
+			"email": "theyamshikov@yandex.ru"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		
+	},
+	"autoload": {
+		"psr-4": {
+			"ZnBundle\\Log\\": "src",
+			"ZnBundle\\Log\\Tests\\": "tests"
+		}
+	}
+}
