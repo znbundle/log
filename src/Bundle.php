@@ -7,7 +7,7 @@ use ZnCore\Base\Libs\App\Base\BaseBundle;
 class Bundle extends BaseBundle
 {
 
-    public function admin(): array
+    public function yiiAdmin(): array
     {
         return [
 
