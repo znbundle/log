@@ -2,8 +2,8 @@
 
 namespace ZnBundle\Log\Domain\Entities;
 
-use Symfony\Component\Validator\Constraints as Assert;
 use Monolog\DateTimeImmutable;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
 use ZnCore\Domain\Interfaces\Entity\ValidateEntityByMetadataInterface;
@@ -19,6 +19,11 @@ class LogEntity implements EntityIdInterface, ValidateEntityByMetadataInterface
     private $channel;
     private $extra;
     private $createdAt;
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+    }
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
