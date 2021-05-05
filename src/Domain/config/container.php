@@ -42,7 +42,7 @@ return [
                 $logger = new NullLogger('application');
             } else {
                 $handler = $container->get(HandlerInterface::class);
-                $level = EnvHelper::isDev() ? Logger::DEBUG : Logger::ERROR;
+                $level = EnvHelper::isDebug() ? Logger::DEBUG : Logger::ERROR;
                 $handler->setLevel($level);
                 $logger = new Logger('application');
                 $logger->pushHandler($handler);
