@@ -2,12 +2,9 @@
 
 namespace ZnBundle\Log\Domain\Repositories\Eloquent;
 
-use Illuminate\Support\Collection;
-use ZnCore\Domain\Helpers\EntityHelper;
-use ZnCore\Domain\Helpers\ValidationHelper;
-use ZnLib\Db\Base\BaseEloquentCrudRepository;
 use ZnBundle\Log\Domain\Entities\LogEntity;
 use ZnBundle\Log\Domain\Interfaces\Repositories\LogRepositoryInterface;
+use ZnLib\Db\Base\BaseEloquentCrudRepository;
 
 class LogRepository extends BaseEloquentCrudRepository implements LogRepositoryInterface
 {

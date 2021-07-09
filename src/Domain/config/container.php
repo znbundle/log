@@ -39,7 +39,7 @@ return [
         LoggerInterface::class => function (ContainerInterface $container) {
             $driver = $_ENV['LOG_DRIVER'] ?? null;
             if ($driver == null) {
-                $logger = new NullLogger('application');
+                $logger = new NullLogger();
             } else {
                 $handler = $container->get(HandlerInterface::class);
                 $level = EnvHelper::isDebug() ? Logger::DEBUG : Logger::ERROR;
