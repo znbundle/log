@@ -15,6 +15,9 @@ use ZnBundle\Log\Domain\Repositories\Eloquent\LogRepository;
 
 return [
     'singletons' => [
+        'ZnBundle\Log\Domain\Interfaces\Repositories\HistoryRepositoryInterface' => 'ZnBundle\Log\Domain\Repositories\Json\HistoryRepository',
+        'ZnBundle\Log\Domain\Interfaces\Services\HistoryServiceInterface' => 'ZnBundle\Log\Domain\Services\HistoryService',
+
         LogRepositoryInterface::class => LogRepository::class,
         HandlerInterface::class => function (ContainerInterface $container) {
             /**
@@ -49,5 +52,10 @@ return [
             }
             return $logger;
         },
+    ],
+    'entities' => [
+//        'ZnBundle\Log\Domain\Entities\LogEntity' => 'ZnBundle\Log\Domain\Interfaces\Repositories\LogRepositoryInterface',
+//        'ZnBundle\Log\Domain\Entities\HistoryEntity' => 'ZnBundle\Log\Domain\Interfaces\Repositories\LogRepositoryInterface',
+        'ZnBundle\Log\Domain\Entities\HistoryEntity' => 'ZnBundle\Log\Domain\Interfaces\Repositories\HistoryRepositoryInterface',
     ],
 ];
