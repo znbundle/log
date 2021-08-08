@@ -34,10 +34,6 @@ $attributes = [
         'attributeName' => 'level',
     ],
     [
-        'label' => I18Next::t('core', 'main.attribute.'),
-        'attributeName' => '',
-    ],
-    [
         'label' => I18Next::t('core', 'main.attribute.level_name'),
         'attributeName' => 'level_name',
     ],

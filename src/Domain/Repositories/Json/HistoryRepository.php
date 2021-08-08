@@ -2,21 +2,25 @@
 
 namespace ZnBundle\Log\Domain\Repositories\Json;
 
+use Illuminate\Support\Collection;
 use Monolog\DateTimeImmutable;
 use Monolog\Handler\HandlerInterface;
 use ZnBundle\Log\Domain\Entities\HistoryEntity;
 use ZnBundle\Log\Domain\Entities\LogEntity;
 use ZnBundle\Log\Domain\Interfaces\Repositories\HistoryRepositoryInterface;
+use ZnBundle\Log\Domain\Mappers\HistoryMapper;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
 use ZnCore\Domain\Interfaces\Libs\EntityManagerInterface;
 use ZnCore\Domain\Libs\Query;
 use ZnCore\Domain\Traits\EntityManagerTrait;
+use ZnLib\Db\Traits\MapperTrait;
 
 class HistoryRepository implements HistoryRepositoryInterface
 {
 
     use EntityManagerTrait;
+    use MapperTrait;
 
     private $path;
 
@@ -31,20 +35,25 @@ class HistoryRepository implements HistoryRepositoryInterface
         return HistoryEntity::class;
     }
 
+    public function mappers(): array
+    {
+        return [
+            new HistoryMapper(),
+        ];
+    }
+
     public function all(Query $query = null)
     {
         $file = new \SplFileObject($this->path);
         $fileIterator = new \LimitIterator($file, $query->getOffset(), $query->getPerPage());
-        $array = [];
+        $collection = new Collection();
         foreach ($fileIterator as $index => $line) {
             $id = $index + 1;
             $item = json_decode($line, JSON_OBJECT_AS_ARRAY);
             $item['id'] = $id;
-            $item['createdAt'] = new \DateTime($item['datetime']);
-            unset($item['datetime']);
-            $array[] = $item;
+            $entity = $this->mapperDecodeEntity($item);
+            $collection->add($entity);
         }
-        $collection = $this->getEntityManager()->createEntityCollection($this->getEntityClass(), $array);
         return $collection;
     }
 
