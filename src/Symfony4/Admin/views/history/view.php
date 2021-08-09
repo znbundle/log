@@ -41,21 +41,19 @@ $attributes = [
     [
         'label' => I18Next::t('core', 'main.attribute.extra'),
         'attributeName' => 'extra',
-        'formatter' => [
-            'class' => \ZnLib\Web\Widgets\Format\Formatters\HtmlFormatter::class,
-        ],
+        'format' => 'html',
         'value' => function (\ZnBundle\Log\Domain\Entities\HistoryEntity $historyEntity) {
-            return '<pre>' . json_encode($historyEntity->getExtra(), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . '</pre>';
+            $extra = json_encode($historyEntity->getExtra(), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            return '<pre>' . $extra . '</pre>';
         },
     ],
     [
         'label' => I18Next::t('core', 'main.attribute.context'),
         'attributeName' => 'context',
-        'formatter' => [
-            'class' => \ZnLib\Web\Widgets\Format\Formatters\HtmlFormatter::class,
-        ],
+        'format' => 'html',
         'value' => function (\ZnBundle\Log\Domain\Entities\HistoryEntity $historyEntity) {
-            return '<pre>' . json_encode($historyEntity->getContext(), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . '</pre>';
+            $context = json_encode($historyEntity->getContext(), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            return '<pre>' . str_replace('\n', PHP_EOL, $context) . '</pre>';
         },
     ],
 ];

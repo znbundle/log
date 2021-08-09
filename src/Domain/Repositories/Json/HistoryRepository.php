@@ -48,11 +48,13 @@ class HistoryRepository implements HistoryRepositoryInterface
         $fileIterator = new \LimitIterator($file, $query->getOffset(), $query->getPerPage());
         $collection = new Collection();
         foreach ($fileIterator as $index => $line) {
-            $id = $index + 1;
-            $item = json_decode($line, JSON_OBJECT_AS_ARRAY);
-            $item['id'] = $id;
-            $entity = $this->mapperDecodeEntity($item);
-            $collection->add($entity);
+            if(!empty($line)) {
+                $item = json_decode($line, JSON_OBJECT_AS_ARRAY);
+                $id = $index + 1;
+                $item['id'] = $id;
+                $entity = $this->mapperDecodeEntity($item);
+                $collection->add($entity);
+            }
         }
         return $collection;
     }
@@ -60,7 +62,7 @@ class HistoryRepository implements HistoryRepositoryInterface
     public function count(Query $query = null): int
     {
         $file_arr = file($this->path);
-        return count($file_arr) - 1;
+        return count($file_arr);
     }
 
     public function oneById($id, Query $query = null): EntityIdInterface
