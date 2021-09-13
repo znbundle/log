@@ -68,8 +68,8 @@ class HistoryRepository implements HistoryRepositoryInterface
     public function oneById($id, Query $query = null): EntityIdInterface
     {
         $query = Query::forge($query);
-        $query->setOffset($id - 1);
-        $query->setPerPage(1);
+        $query->offset($id - 1);
+        $query->perPage(1);
         $collection = $this->all($query);
         $entity = $collection->first();
         if(empty($entity)) {
