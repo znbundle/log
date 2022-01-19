@@ -61,8 +61,17 @@ class HistoryRepository implements HistoryRepositoryInterface
 
     public function count(Query $query = null): int
     {
-        $file_arr = file($this->path);
-        return count($file_arr);
+        $count = 0;
+        $handle = fopen($this->path, "r");
+        while (!feof($handle))  {
+            fgets($handle);
+            $count++;
+        }
+        fclose($handle);
+        return $count;
+
+//        $file_arr = file($this->path);
+//        return count($file_arr);
     }
 
     public function oneById($id, Query $query = null): EntityIdInterface
