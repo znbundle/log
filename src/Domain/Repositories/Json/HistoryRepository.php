@@ -68,7 +68,7 @@ class HistoryRepository implements HistoryRepositoryInterface
             $count++;
         }
         fclose($handle);
-        return $count;
+        return $count - 1;
 
 //        $file_arr = file($this->path);
 //        return count($file_arr);
