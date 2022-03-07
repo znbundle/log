@@ -4,7 +4,7 @@ namespace ZnBundle\Log\Domain\Repositories\Eloquent;
 
 use ZnBundle\Log\Domain\Entities\LogEntity;
 use ZnBundle\Log\Domain\Interfaces\Repositories\LogRepositoryInterface;
-use ZnLib\Db\Base\BaseEloquentCrudRepository;
+use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 
 class LogRepository extends BaseEloquentCrudRepository implements LogRepositoryInterface
 {
