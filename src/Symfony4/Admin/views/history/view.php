@@ -7,7 +7,7 @@
  */
 
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
-use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Contract\Domain\Interfaces\Entities\EntityIdInterface;
 use ZnLib\Web\View\View;
 use ZnLib\Web\Widgets\Detail\DetailWidget;
 use ZnLib\Web\Widgets\Format\Formatters\ArrayFormatter;
