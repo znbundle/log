@@ -7,7 +7,7 @@ use Psr\Log\LoggerInterface;
 use yii\helpers\VarDumper;
 use yii\log\Logger as YiiLogger;
 use yii\log\Target;
-use ZnCore\Base\Helpers\EnvHelper;
+use ZnCore\Base\Libs\App\Helpers\EnvHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 
 class LoggerTarget extends Target
