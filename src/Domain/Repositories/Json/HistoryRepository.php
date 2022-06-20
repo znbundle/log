@@ -11,15 +11,15 @@ use ZnBundle\Log\Domain\Interfaces\Repositories\HistoryRepositoryInterface;
 use ZnBundle\Log\Domain\Mappers\HistoryMapper;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Contract\Domain\Interfaces\Entities\EntityIdInterface;
-use ZnCore\Domain\Interfaces\Libs\EntityManagerInterface;
+use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
 use ZnCore\Domain\Libs\Query;
-use ZnCore\Domain\Traits\EntityManagerTrait;
+use ZnCore\Base\Libs\EntityManager\Traits\EntityManagerAwareTrait;
 use ZnDatabase\Base\Domain\Traits\MapperTrait;
 
 class HistoryRepository implements HistoryRepositoryInterface
 {
 
-    use EntityManagerTrait;
+    use EntityManagerAwareTrait;
     use MapperTrait;
 
     private $path;

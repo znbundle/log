@@ -6,9 +6,9 @@ use Monolog\DateTimeImmutable;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use ZnCore\Contract\Domain\Interfaces\Entities\EntityIdInterface;
-use ZnCore\Base\Libs\Entity\Interfaces\ValidateEntityByMetadataInterface;
+use ZnCore\Base\Libs\Validation\Interfaces\ValidationByMetadataInterface;
 
-class LogEntity implements EntityIdInterface, ValidateEntityByMetadataInterface
+class LogEntity implements EntityIdInterface, ValidationByMetadataInterface
 {
 
     private $id;
