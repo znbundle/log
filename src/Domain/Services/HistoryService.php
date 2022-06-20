@@ -8,8 +8,8 @@ use ZnBundle\Log\Domain\Interfaces\Repositories\HistoryRepositoryInterface;
 use ZnBundle\Log\Domain\Interfaces\Services\HistoryServiceInterface;
 use ZnCore\Domain\Base\BaseCrudService;
 use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Domain\Libs\DataProvider;
-use ZnCore\Domain\Libs\Query;
+use ZnCore\Base\Libs\DataProvider\Libs\DataProvider;
+use ZnCore\Base\Libs\Query\Entities\Query;
 
 class HistoryService extends BaseCrudService implements HistoryServiceInterface
 {
