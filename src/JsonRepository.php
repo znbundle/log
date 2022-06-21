@@ -4,7 +4,7 @@ namespace ZnBundle\Log;
 
 use Illuminate\Support\Collection;
 use ZnCore\Base\Libs\Entity\Helpers\EntityHelper;
-use ZnCore\Domain\Interfaces\DomainInterface;
+use ZnCore\Base\Libs\Domain\Interfaces\DomainInterface;
 use ZnBundle\Log\Domain\Entities\LogEntity;
 
 class JsonRepository
