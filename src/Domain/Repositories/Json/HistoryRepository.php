@@ -3,6 +3,7 @@
 namespace ZnBundle\Log\Domain\Repositories\Json;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Enumerable;
 use Monolog\DateTimeImmutable;
 use Monolog\Handler\HandlerInterface;
 use ZnBundle\Log\Domain\Entities\HistoryEntity;
@@ -42,7 +43,7 @@ class HistoryRepository implements HistoryRepositoryInterface
         ];
     }
 
-    public function all(Query $query = null)
+    public function all(Query $query = null): Enumerable
     {
         $file = new \SplFileObject($this->path);
         $fileIterator = new \LimitIterator($file, $query->getOffset(), $query->getPerPage());
