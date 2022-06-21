@@ -7,15 +7,15 @@ use ZnCore\Base\Libs\Repository\Interfaces\MapperInterface;
 class HistoryMapper implements MapperInterface
 {
 
-    public function encode($data)
+    public function encode($entityAttributes)
     {
-        return $data;
+        return $entityAttributes;
     }
 
-    public function decode($row)
+    public function decode($rowAttributes)
     {
-        $row['createdAt'] = new \DateTime($row['datetime']);
-        unset($row['datetime']);
-        return $row;
+        $rowAttributes['createdAt'] = new \DateTime($rowAttributes['datetime']);
+        unset($rowAttributes['datetime']);
+        return $rowAttributes;
     }
 }
