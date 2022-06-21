@@ -2,9 +2,9 @@
 
 namespace ZnBundle\Log\Domain\Mappers;
 
-use ZnCore\Contract\Encoder\Interfaces\EncoderInterface;
+use ZnCore\Base\Libs\Repository\Interfaces\MapperInterface;
 
-class HistoryMapper implements EncoderInterface
+class HistoryMapper implements MapperInterface
 {
 
     public function encode($data)
