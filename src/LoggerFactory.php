@@ -7,7 +7,7 @@ use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use ZnCore\Base\Libs\App\Helpers\EnvHelper;
-use ZnCore\Base\Libs\Domain\Interfaces\DomainInterface;
+use ZnCore\Domain\Domain\Interfaces\DomainInterface;
 use ZnBundle\Log\Domain\Monolog\Handler\EloquentHandler;
 
 class LoggerFactory

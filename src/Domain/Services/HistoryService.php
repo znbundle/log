@@ -6,10 +6,10 @@ use ZnBundle\Log\Domain\Entities\HistoryEntity;
 use ZnBundle\Log\Domain\Entities\LogEntity;
 use ZnBundle\Log\Domain\Interfaces\Repositories\HistoryRepositoryInterface;
 use ZnBundle\Log\Domain\Interfaces\Services\HistoryServiceInterface;
-use ZnCore\Base\Libs\Service\Base\BaseCrudService;
-use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Base\Libs\DataProvider\Libs\DataProvider;
-use ZnCore\Base\Libs\Query\Entities\Query;
+use ZnCore\Domain\Service\Base\BaseCrudService;
+use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
+use ZnCore\Domain\DataProvider\Libs\DataProvider;
+use ZnCore\Domain\Query\Entities\Query;
 
 class HistoryService extends BaseCrudService implements HistoryServiceInterface
 {
