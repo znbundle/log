@@ -4,7 +4,7 @@ namespace ZnBundle\Log\Domain\Monolog\Formatter;
 
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\NormalizerFormatter;
-use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Libs\Arr\Helpers\ArrayHelper;
 use ZnCore\Domain\Entity\Helpers\EntityHelper;
 use ZnBundle\Log\Domain\Entities\LogEntity;
 
