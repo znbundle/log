@@ -6,7 +6,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
-use ZnCore\Base\App\Helpers\EnvHelper;
+use ZnCore\Base\Env\Helpers\EnvHelper;
 use ZnCore\Domain\Domain\Interfaces\DomainInterface;
 use ZnBundle\Log\Domain\Monolog\Handler\EloquentHandler;
 
