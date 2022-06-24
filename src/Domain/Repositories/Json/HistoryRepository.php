@@ -15,13 +15,13 @@ use ZnCore\Domain\Entity\Interfaces\EntityIdInterface;
 use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnCore\Domain\EntityManager\Traits\EntityManagerAwareTrait;
-use ZnCore\Domain\Repository\Traits\MapperTrait;
+use ZnCore\Domain\Repository\Traits\RepositoryMapperTrait;
 
 class HistoryRepository implements HistoryRepositoryInterface
 {
 
     use EntityManagerAwareTrait;
-    use MapperTrait;
+    use RepositoryMapperTrait;
 
     private $path;
 
