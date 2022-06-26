@@ -8,10 +8,10 @@
 
 use ZnLib\Components\I18Next\Facades\I18Next;
 use ZnCore\Domain\Entity\Interfaces\EntityIdInterface;
-use ZnLib\Web\View\View;
-use ZnLib\Web\Widgets\Detail\DetailWidget;
-use ZnLib\Web\Widgets\Format\Formatters\ArrayFormatter;
-use ZnLib\Web\Widgets\Format\Formatters\LinkFormatter;
+use ZnLib\Web\Components\View\Libs\View;
+use ZnLib\Web\Components\Widget\Widgets\Detail\DetailWidget;
+use ZnLib\Web\Components\Widget\Widgets\Format\Formatters\ArrayFormatter;
+use ZnLib\Web\Components\Widget\Widgets\Format\Formatters\LinkFormatter;
 
 $attributes = [
     [
