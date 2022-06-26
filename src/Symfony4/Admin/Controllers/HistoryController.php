@@ -6,10 +6,10 @@ use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use ZnBundle\Log\Domain\Interfaces\Services\HistoryServiceInterface;
 use ZnBundle\Notify\Domain\Interfaces\Services\ToastrServiceInterface;
-use ZnLib\Web\Components\Url\Helpers\Url;
-use ZnLib\Web\Components\Controller\BaseWebCrudController;
-use ZnLib\Web\Components\Controller\Interfaces\ControllerAccessInterface;
-use ZnLib\Web\Components\TwBootstrap\Widgets\Breadcrumb\BreadcrumbWidget;
+use ZnLib\Web\Url\Helpers\Url;
+use ZnLib\Web\Controller\Base\BaseWebCrudController;
+use ZnLib\Web\Controller\Interfaces\ControllerAccessInterface;
+use ZnLib\Web\TwBootstrap\Widgets\Breadcrumb\BreadcrumbWidget;
 
 class HistoryController extends BaseWebCrudController implements ControllerAccessInterface
 {
