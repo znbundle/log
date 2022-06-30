@@ -43,7 +43,7 @@ class HistoryRepository implements HistoryRepositoryInterface
         ];
     }
 
-    public function all(Query $query = null): Enumerable
+    public function findAll(Query $query = null): Enumerable
     {
         $file = new \SplFileObject($this->path);
         $fileIterator = new \LimitIterator($file, $query->getOffset(), $query->getPerPage());

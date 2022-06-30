@@ -10,7 +10,7 @@ use ZnBundle\Log\Domain\Entities\LogEntity;
 class JsonRepository
 {
 
-    public function all()
+    public function findAll()
     {
         $env = $_ENV['APP_ENV'];
         $logFileName = __DIR__ . '/../../../../../' . $_ENV['MONOLOG_DIR'] . '/' . $env . '.json';
