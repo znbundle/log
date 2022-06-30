@@ -75,12 +75,12 @@ class HistoryRepository implements HistoryRepositoryInterface
 //        return count($file_arr);
     }
 
-    public function oneById($id, Query $query = null): EntityIdInterface
+    public function findOneById($id, Query $query = null): EntityIdInterface
     {
         $query = Query::forge($query);
         $query->offset($id - 1);
         $query->perPage(1);
-        $collection = $this->all($query);
+        $collection = $this->findAll($query);
         $entity = $collection->first();
         if(empty($entity)) {
             throw new NotFoundException();
