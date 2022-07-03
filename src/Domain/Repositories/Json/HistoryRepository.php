@@ -2,8 +2,8 @@
 
 namespace ZnBundle\Log\Domain\Repositories\Json;
 
-use Illuminate\Support\Collection;
-use Illuminate\Support\Enumerable;
+use ZnCore\Domain\Collection\Libs\Collection;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use Monolog\DateTimeImmutable;
 use Monolog\Handler\HandlerInterface;
 use ZnBundle\Log\Domain\Entities\HistoryEntity;

@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Log;
 
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Entity\Helpers\EntityHelper;
 use ZnCore\Domain\Domain\Interfaces\DomainInterface;
 use ZnBundle\Log\Domain\Entities\LogEntity;

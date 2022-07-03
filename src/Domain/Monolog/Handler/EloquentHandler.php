@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Log\Domain\Monolog\Handler;
 
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use Monolog\Formatter\FormatterInterface;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
