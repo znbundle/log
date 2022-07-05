@@ -2,10 +2,9 @@
 
 namespace ZnBundle\Log;
 
+use ZnBundle\Log\Domain\Entities\LogEntity;
 use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Entity\Helpers\EntityHelper;
-use ZnCore\Domain\Domain\Interfaces\DomainInterface;
-use ZnBundle\Log\Domain\Entities\LogEntity;
 
 class JsonRepository
 {

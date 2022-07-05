@@ -2,12 +2,12 @@
 
 namespace ZnBundle\Log\Domain\Monolog\Handler;
 
-use ZnCore\Domain\Collection\Libs\Collection;
 use Monolog\Formatter\FormatterInterface;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
 use ZnBundle\Log\Domain\Interfaces\Repositories\LogRepositoryInterface;
 use ZnBundle\Log\Domain\Monolog\Formatter\EloquentFormatter;
+use ZnCore\Domain\Collection\Libs\Collection;
 
 class EloquentHandler extends AbstractProcessingHandler
 {

@@ -2,19 +2,17 @@
 
 namespace ZnBundle\Log\Domain\Repositories\Json;
 
-use ZnCore\Domain\Collection\Libs\Collection;
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use Monolog\DateTimeImmutable;
 use Monolog\Handler\HandlerInterface;
 use ZnBundle\Log\Domain\Entities\HistoryEntity;
-use ZnBundle\Log\Domain\Entities\LogEntity;
 use ZnBundle\Log\Domain\Interfaces\Repositories\HistoryRepositoryInterface;
 use ZnBundle\Log\Domain\Mappers\HistoryMapper;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Domain\Collection\Libs\Collection;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Domain\Entity\Interfaces\EntityIdInterface;
 use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Domain\Query\Entities\Query;
 use ZnCore\Domain\EntityManager\Traits\EntityManagerAwareTrait;
+use ZnCore\Domain\Query\Entities\Query;
 use ZnCore\Domain\Repository\Traits\RepositoryMapperTrait;
 
 class HistoryRepository implements HistoryRepositoryInterface
@@ -49,7 +47,7 @@ class HistoryRepository implements HistoryRepositoryInterface
         $fileIterator = new \LimitIterator($file, $query->getOffset(), $query->getPerPage());
         $collection = new Collection();
         foreach ($fileIterator as $index => $line) {
-            if(!empty($line)) {
+            if (!empty($line)) {
                 $item = json_decode($line, JSON_OBJECT_AS_ARRAY);
                 $id = $index + 1;
                 $item['id'] = $id;
@@ -64,7 +62,7 @@ class HistoryRepository implements HistoryRepositoryInterface
     {
         $count = 0;
         $handle = fopen($this->path, "r");
-        while (!feof($handle))  {
+        while (!feof($handle)) {
             fgets($handle);
             $count++;
         }
@@ -82,7 +80,7 @@ class HistoryRepository implements HistoryRepositoryInterface
         $query->perPage(1);
         $collection = $this->findAll($query);
         $entity = $collection->first();
-        if(empty($entity)) {
+        if (empty($entity)) {
             throw new NotFoundException();
         }
         return $entity;
