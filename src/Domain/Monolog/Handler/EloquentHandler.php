@@ -7,7 +7,7 @@ use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
 use ZnBundle\Log\Domain\Interfaces\Repositories\LogRepositoryInterface;
 use ZnBundle\Log\Domain\Monolog\Formatter\EloquentFormatter;
-use ZnCore\Domain\Collection\Libs\Collection;
+use ZnCore\Collection\Libs\Collection;
 
 class EloquentHandler extends AbstractProcessingHandler
 {
