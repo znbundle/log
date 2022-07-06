@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Log\Domain\Mappers;
 
-use ZnCore\Domain\Repository\Interfaces\MapperInterface;
+use ZnCore\Repository\Interfaces\MapperInterface;
 
 class HistoryMapper implements MapperInterface
 {

@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Log\Domain\Interfaces\Repositories;
 
-use ZnCore\Domain\Repository\Interfaces\ModifyInterface;
+use ZnCore\Repository\Interfaces\ModifyInterface;
 
 interface LogRepositoryInterface extends ModifyInterface
 {

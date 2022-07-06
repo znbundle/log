@@ -12,8 +12,8 @@ use ZnCore\Entity\Exceptions\NotFoundException;
 use ZnCore\Entity\Interfaces\EntityIdInterface;
 use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
 use ZnCore\EntityManager\Traits\EntityManagerAwareTrait;
-use ZnCore\Domain\Query\Entities\Query;
-use ZnCore\Domain\Repository\Traits\RepositoryMapperTrait;
+use ZnCore\Query\Entities\Query;
+use ZnCore\Repository\Traits\RepositoryMapperTrait;
 
 class HistoryRepository implements HistoryRepositoryInterface
 {

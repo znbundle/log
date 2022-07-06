@@ -8,7 +8,7 @@ use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
-use ZnCore\Base\Env\Helpers\EnvHelper;
+use ZnCore\Env\Helpers\EnvHelper;
 use ZnBundle\Log\Domain\Interfaces\Repositories\LogRepositoryInterface;
 use ZnBundle\Log\Domain\Monolog\Handler\EloquentHandler;
 use ZnBundle\Log\Domain\Repositories\Eloquent\LogRepository;
