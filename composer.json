@@ -11,7 +11,9 @@
 	"minimum-stability": "dev",
 	"require": {
 		"psr/log": "~1.0",
-		"monolog/monolog": "~1.22 || ~2.0"
+		"monolog/monolog": "~1.22 || ~2.0",
+		"znpack/core": "0.x-dev",
+		"znpack/domain": "0.x-dev"
 	},
 	"autoload": {
 		"psr-4": {
