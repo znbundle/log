@@ -26,7 +26,7 @@ return [
              */
             $driver = $_ENV['LOG_DRIVER'] ?? null;
             if ($driver == 'file') {
-                $logFileName = __DIR__ . '/../../../../../../' . $_ENV['LOG_DIRECTORY'] . '/application.json';
+                $logFileName = $_ENV['LOG_DIRECTORY'] . '/application.json';
                 $handler = new StreamHandler($logFileName);
                 $formatterClass = $_ENV['LOG_FORMATTER'] ?? JsonFormatter::class;
                 $formatter = $container->get($formatterClass);
