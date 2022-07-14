@@ -10,10 +10,10 @@ use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Collection\Libs\Collection;
 use ZnCore\Entity\Exceptions\NotFoundException;
 use ZnCore\Entity\Interfaces\EntityIdInterface;
-use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\EntityManager\Traits\EntityManagerAwareTrait;
+use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
+use ZnDomain\EntityManager\Traits\EntityManagerAwareTrait;
 use ZnCore\Query\Entities\Query;
-use ZnCore\Repository\Traits\RepositoryMapperTrait;
+use ZnDomain\Repository\Traits\RepositoryMapperTrait;
 
 class HistoryRepository implements HistoryRepositoryInterface
 {
