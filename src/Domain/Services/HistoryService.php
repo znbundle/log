@@ -9,7 +9,7 @@ use ZnBundle\Log\Domain\Interfaces\Services\HistoryServiceInterface;
 use ZnDomain\Service\Base\BaseCrudService;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnDomain\DataProvider\Libs\DataProvider;
-use ZnCore\Query\Entities\Query;
+use ZnDomain\Query\Entities\Query;
 
 class HistoryService extends BaseCrudService implements HistoryServiceInterface
 {

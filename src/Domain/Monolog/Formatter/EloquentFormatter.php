@@ -5,7 +5,7 @@ namespace ZnBundle\Log\Domain\Monolog\Formatter;
 use Monolog\DateTimeImmutable;
 use Monolog\Formatter\NormalizerFormatter;
 use ZnCore\Arr\Helpers\ArrayHelper;
-use ZnCore\Entity\Helpers\EntityHelper;
+use ZnDomain\Entity\Helpers\EntityHelper;
 use ZnBundle\Log\Domain\Entities\LogEntity;
 
 class EloquentFormatter extends NormalizerFormatter
