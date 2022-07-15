@@ -3,8 +3,8 @@
 namespace ZnBundle\Log;
 
 use ZnBundle\Log\Domain\Entities\LogEntity;
+use ZnCore\Code\Helpers\PropertyHelper;
 use ZnCore\Collection\Libs\Collection;
-use ZnDomain\Entity\Helpers\EntityHelper;
 
 class JsonRepository
 {
@@ -18,7 +18,7 @@ class JsonRepository
         foreach ($lines as &$line) {
             $line = json_decode($line);
             $logEntity = new LogEntity();
-            EntityHelper::setAttributes($logEntity, $line);
+            PropertyHelper::setAttributes($logEntity, $line);
             $collection->add($logEntity);
         }
         return $collection;
